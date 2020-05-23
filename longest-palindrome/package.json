@@ -1,0 +1,52 @@
+{
+  "name": "longest-palindrome",
+  "version": "1.0.0",
+  "description": "longest palindrome",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "dist/",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest --coverage",
+    "pretest": "npm run build"
+  },
+  "author": "licongwen",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "regenerator-runtime": "^0.13.5",
+    "rollup": "^2.9.1",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "transform": {
+      ".+\\.jsx?$": "<rootDir>/node_modules/babel-jest"
+    },
+    "testMatch": [
+      "**/*.(spec|test).(js|ts)?(x)"
+    ],
+    "moduleNameMapper": {
+      "@bilibili-firebird/lib.number-format": "<rootDir>/dist/index.js",
+      "../lib": "<rootDir>/dist/index.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "coverageDirectory": "<rootDir>/.coverage-report"
+  }
+}
