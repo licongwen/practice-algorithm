@@ -5,7 +5,7 @@
 
 >从中间某一项开始，依次对比该项左右的值是否相等
 
-  回文的形式有两种：a) cbbd b). ababd，所以传值的方式也有两种
+  回文的形式有两种：a). cbbd b). ababd，所以传值的方式也有两种
 
 ```js
 function getLen(left, right) {
